@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpeanuts <mpeanuts@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 20:57:43 by mpeanuts          #+#    #+#             */
-/*   Updated: 2021/11/19 20:57:44 by mpeanuts         ###   ########.fr       */
+/*   Created: 2021/11/19 20:57:29 by mpeanuts          #+#    #+#             */
+/*   Updated: 2021/11/19 20:57:30 by mpeanuts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static size_t	len_before_nl(char *buf)
 {
@@ -25,7 +25,7 @@ static size_t	len_before_nl(char *buf)
 	return (count);
 }
 
-static char	*truncate_line(char **fd_buf)
+char	*truncate_line(char **fd_buf)
 {
 	char	*line;
 	char	*tmp;
@@ -47,7 +47,7 @@ static char	*truncate_line(char **fd_buf)
 	return (line);
 }
 
-static char	*return_and_truncate(char **fd_buf)
+char	*return_and_truncate(char **fd_buf)
 {
 	char	*line;
 
@@ -64,7 +64,7 @@ static char	*return_and_truncate(char **fd_buf)
 	return (line);
 }
 
-static char	*save(char *buf, char **fd_buf)
+char	*save(char *buf, char **fd_buf)
 {
 	char	*tmp;
 
